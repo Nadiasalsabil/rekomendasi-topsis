@@ -50,8 +50,8 @@
                                     echo '<td>'.$data['nama'].'</td>';
                                     echo '<td>'.$data['lama_peminjaman'].'</td>';
                                     echo '<td>'.$data['harga'].'</td>';
-                                    echo '<td><a href=dashboard.php?halaman=update_detharga&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
-                                    echo '<td><a href=../config/d_harga.php?id='.$data['id'].'><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
+                                    echo '<td><a href=admin.php?halaman=update_harga&&id='.$data['id'].'><span class="glyphicon glyphicon-edit"></a></td>';
+                                    echo '<td><a href=../config/d_harga.php?id='.$data['id'].' onclick="return checkDelete()"><span class="glyphicon glyphicon-remove-sign"></span></a></td>';
                                     echo '</tr>';
                                     $no++;	
                                 }
@@ -70,3 +70,10 @@
     <!-- /.row -->
 </section>
 <!-- /.content -->
+
+
+<script language="JavaScript" type="text/javascript">
+function checkDelete(){
+    return confirm('Are you sure?');
+}
+</script>
